@@ -16,30 +16,4 @@ A simple Python To-Do List application to add, view, and remove tasks. Helps org
 
 ---
 
-## ⚡ Sample Code Snippet
-```python
-# Simple Python To-Do List
-tasks = []
 
-def add_task(task):
-    tasks.append(task)
-    print(f"Added task: {task}")
-
-def view_tasks():
-    print("Tasks:")
-    for idx, task in enumerate(tasks, start=1):
-        print(f"{idx}. {task}")
-
-def remove_task(index):
-    if 0 <= index < len(tasks):
-        removed = tasks.pop(index)
-        print(f"Removed task: {removed}")
-    else:
-        print("Invalid task number")
-
-# Example usage
-add_task("Complete DSA")
-add_task("Practice Python")
-view_tasks()
-remove_task(0)
-view_tasks()
