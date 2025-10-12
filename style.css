@@ -1,0 +1,95 @@
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+  transition: background 0.3s, color 0.3s;
+}
+
+:root {
+  --bg: #f2f2f2;
+  --text: #333;
+  --item-bg: #fff;
+}
+
+.dark {
+  --bg: #1e1e1e;
+  --text: #f2f2f2;
+  --item-bg: #333;
+}
+
+h1 {
+  color: var(--text);
+}
+
+#controls {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+#todo-form input,
+#todo-form select,
+#todo-form input[type="date"] {
+  padding: 10px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+#todo-form button {
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#toggle-theme {
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+#todo-list {
+  list-style: none;
+  padding: 0;
+  width: 400px;
+}
+
+#todo-list li {
+  background: var(--item-bg);
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: grab;
+}
+
+#todo-list li.completed span.text {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.actions button {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.editing input {
+  width: 100%;
+}
